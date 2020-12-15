@@ -11,7 +11,7 @@ public class CombineChars {
     }
 
     public static class CharCount implements Comparable<CharCount> {
-        private char chracter;
+        private final char chracter;
         private int count;
 
         public CharCount(char chracter, int count) {
@@ -72,8 +72,8 @@ public class CombineChars {
     /**
      * 对list重新排序；取前interval个count最大的key,加入String。然后将对应key的count-1;
      *
-     * @param interval
-     * @return
+     * @param interval 间隔距离
+     * @return 结果
      */
     private String getStr(int interval) {
         Collections.sort(list);
